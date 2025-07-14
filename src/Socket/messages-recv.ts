@@ -848,6 +848,7 @@ export const makeMessagesRecvSocket = (config: SocketConfig) => {
 							if (isJidUser(msg.key.remoteJid!)) {
 								participant = author
 							}
+						}
 
 						await sendReceipt(msg.key.remoteJid!, participant!, [msg.key.id!], type)
 
